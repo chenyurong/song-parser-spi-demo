@@ -1,0 +1,15 @@
+/.idea/
+/log/
+*.iml
+/song-parser/target/
+/song-parser/.idea/
+/song-parser/*.iml
+/song-parser-demo/target/
+/song-parser-demo/.idea/
+/song-parser-demo/*.iml
+/song-parser-mp3/target/
+/song-parser-mp3/.idea/
+/song-parser-mp3/*.iml
+/song-parser-mp4/target/
+/song-parser-mp4/.idea/
+/song-parser-mp4/*.iml
