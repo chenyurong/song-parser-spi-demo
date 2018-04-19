@@ -13,11 +13,11 @@ public class ParserManager {
     private final static CopyOnWriteArrayList<ParserInfo> registeredParsers = new CopyOnWriteArrayList<>();
 
     static {
-        loadInitialDrivers();
+        loadInitialParsers();
         System.out.println("SongParser initialized");
     }
 
-    private static void loadInitialDrivers() {
+    private static void loadInitialParsers() {
         ServiceLoader<Parser> loadedParsers = ServiceLoader.load(Parser.class);
         Iterator<Parser> driversIterator = loadedParsers.iterator();
         try{
