@@ -44,6 +44,6 @@ public class ParserManager {
                 //wrong parser, ignored it.
             }
         }
-        throw new ParserNotFoundException("10001", "找不到对应的解析器。data:" + new String(data));
+        throw new ParserNotFoundException("10001", "Can not find corresponding data:" + new String(data));
     }
 }

@@ -3,16 +3,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.anonymous.demo</groupId>
+    <artifactId>song-parser-rmvb</artifactId>
     <version>1.0.0</version>
-    <modules>
-        <module>../song-parser-rmvb</module>
-    </modules>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
-    <groupId>com.xiaoshu.demo</groupId>
-    <artifactId>song-parser-mp4</artifactId>
-
-    <name>song-parser-mp4</name>
+    <name>song-parser-rmvb</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -27,6 +24,12 @@
             <groupId>com.chenshuyi.demo</groupId>
             <artifactId>song-parser</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
