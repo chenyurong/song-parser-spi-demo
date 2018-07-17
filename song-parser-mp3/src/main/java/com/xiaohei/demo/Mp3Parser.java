@@ -1,5 +1,6 @@
 package com.xiaohei.demo;
 
+import com.chenshuyi.demo.ParserManager;
 import com.chenshuyi.demo.Song;
 import com.chenshuyi.demo.Parser;
 
@@ -14,6 +15,18 @@ public class Mp3Parser implements Parser {
     public final byte[] FORMAT = "MP3".getBytes();
 
     public final int FORMAT_LENGTH = FORMAT.length;
+
+    static
+    {
+        try
+        {
+            ParserManager.registerParser(new com.xiaohei.demo.Mp3Parser());
+        }
+        catch (Exception e)
+        {
+            throw new RuntimeException("Can't register parser!");
+        }
+    }
 
     @Override
     public Song parse(byte[] data) throws Exception{

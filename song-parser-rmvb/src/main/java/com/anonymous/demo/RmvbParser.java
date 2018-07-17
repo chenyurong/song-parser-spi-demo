@@ -1,5 +1,7 @@
 package com.anonymous.demo;
 
+import com.chenshuyi.demo.Parser;
+import com.chenshuyi.demo.ParserManager;
 import com.chenshuyi.demo.Song;
 
 import java.util.Arrays;
@@ -8,11 +10,23 @@ import java.util.Arrays;
  * @author chenyr
  * @date 2018.04.19
  */
-public class RmvbParser implements com.chenshuyi.demo.Parser {
+public class RmvbParser implements Parser {
 
     public final byte[] FORMAT = "RMVB".getBytes();
 
     public final int FORMAT_LENGTH = FORMAT.length;
+
+    static
+    {
+        try
+        {
+            ParserManager.registerParser(new RmvbParser());
+        }
+        catch (Exception e)
+        {
+            throw new RuntimeException("Can't register parser!");
+        }
+    }
 
     @Override
     public Song parse(byte[] data) throws Exception{

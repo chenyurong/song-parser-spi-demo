@@ -1,5 +1,7 @@
 package com.xiaoshu.demo;
 
+import com.chenshuyi.demo.Parser;
+import com.chenshuyi.demo.ParserManager;
 import com.chenshuyi.demo.Song;
 
 import java.util.Arrays;
@@ -8,11 +10,23 @@ import java.util.Arrays;
  * @author chenyr
  * @date 2018.04.19
  */
-public class Mp4Parser implements com.chenshuyi.demo.Parser {
+public class Mp4Parser implements Parser {
 
     public final byte[] FORMAT = "MP4".getBytes();
 
     public final int FORMAT_LENGTH = FORMAT.length;
+
+    static
+    {
+        try
+        {
+            ParserManager.registerParser(new Mp4Parser());
+        }
+        catch (Exception e)
+        {
+            throw new RuntimeException("Can't register parser!");
+        }
+    }
 
     @Override
     public Song parse(byte[] data) throws Exception{
