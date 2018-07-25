@@ -15,6 +15,12 @@ public class Mp4Parser implements com.chenshuyi.demo.Parser {
     public final int FORMAT_LENGTH = FORMAT.length;
 
     @Override
+    public byte[] getByteFormate() {
+        return this.FORMAT;
+    }
+
+
+    @Override
     public Song parse(byte[] data) throws Exception{
         if (!isDataCompatible(data)) {
             throw new Exception("data format is wrong.");
