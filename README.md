@@ -1,5 +1,7 @@
 # Song Parser Demo of Java SPI
 
+[中文版点击这里](README-zh.md)
+
 song-parser-spi-demo is a simple example of Java SPI usage. It can reinfoce your understanding of Java SPI mechanism.
 
 ## Background
