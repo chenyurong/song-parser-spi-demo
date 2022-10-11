@@ -29,6 +29,12 @@ public class RmvbParser implements Parser {
     }
 
     @Override
+    public byte[] getByteFormate() {
+        return this.FORMAT;
+    }
+
+
+    @Override
     public Song parse(byte[] data) throws Exception{
         if (!isDataCompatible(data)) {
             throw new Exception("data format is wrong.");
